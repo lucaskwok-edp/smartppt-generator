@@ -11,7 +11,8 @@ const OUTPUT_FILE = {
 };
 
 const PLACEHOLDER = {
-  REGEX: /\{([^{}]+)\}/g,
+  PREFIX: "PPT_",
+  REGEX: /\{PPT_([^{}]+)\}/g,
 };
 
 const DATE_FORMAT = {

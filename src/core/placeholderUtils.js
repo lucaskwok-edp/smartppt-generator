@@ -7,6 +7,10 @@ function normalizeKey(value) {
     .toLowerCase();
 }
 
+function createPlaceholderText(columnName) {
+  return `{${PLACEHOLDER.PREFIX}${columnName}}`;
+}
+
 function extractPlaceholdersFromText(text) {
   if (!text) {
     return [];
@@ -101,6 +105,7 @@ function validateRequiredColumns(placeholders, columns) {
 
 module.exports = {
   normalizeKey,
+  createPlaceholderText,
   extractPlaceholdersFromText,
   extractUniquePlaceholdersFromTexts,
   createRowValueResolver,
