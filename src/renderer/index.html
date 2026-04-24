@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:;"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmartPPT Generator</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <main class="app">
+      <section class="card">
+        <header class="header">
+          <div>
+            <h1>SmartPPT Generator</h1>
+            <p>
+              Gere apresentações PowerPoint em lote a partir de um template e
+              uma planilha Excel.
+            </p>
+          </div>
+        </header>
+
+        <section class="form-area">
+          <div class="field-group">
+            <label for="templatePath">Template PowerPoint (.pptx)</label>
+
+            <div class="file-row">
+              <input
+                id="templatePath"
+                type="text"
+                placeholder="Selecione o template .pptx"
+                readonly
+              />
+              <button id="btnSelectTemplate" type="button">Selecionar</button>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="excelPath">Planilha Excel (.xlsx)</label>
+
+            <div class="file-row">
+              <input
+                id="excelPath"
+                type="text"
+                placeholder="Selecione a planilha .xlsx"
+                readonly
+              />
+              <button id="btnSelectExcel" type="button">Selecionar</button>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="outputDir">Pasta de saída</label>
+
+            <div class="file-row">
+              <input
+                id="outputDir"
+                type="text"
+                placeholder="Área de Trabalho"
+                readonly
+              />
+              <button id="btnSelectOutput" type="button">Alterar</button>
+            </div>
+          </div>
+
+          <button id="btnGenerate" class="generate-button" type="button">
+            Gerar PowerPoint
+          </button>
+        </section>
+
+        <section class="status-area">
+          <div id="statusBox" class="status-box status-muted">
+            Selecione o template, a planilha e clique em gerar.
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="./renderer.js"></script>
+  </body>
+</html>

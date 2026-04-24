@@ -1,0 +1,35 @@
+{
+  "name": "smartppt-generator",
+  "version": "1.0.0",
+  "description": "Aplicativo desktop para gerar apresentações PowerPoint em lote a partir de um template .pptx e uma planilha .xlsx.",
+  "main": "src/main/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "cross-env NODE_ENV=development electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucaskwok-edp/smartppt-generator.git"
+  },
+  "keywords": [
+    "electron",
+    "powerpoint",
+    "pptx",
+    "excel",
+    "automation"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lucaskwok-edp/smartppt-generator/issues"
+  },
+  "homepage": "https://github.com/lucaskwok-edp/smartppt-generator#readme",
+  "dependencies": {
+    "electron": "^41.3.0",
+    "pptx-automizer": "^0.8.1",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "cross-env": "^10.1.0"
+  }
+}
